@@ -33,7 +33,7 @@ public class MovieController {
     }
 
     @GetMapping("/get-movie-by-name/{name}")
-    public ResponseEntity<Movie> getMovie(@PathVariable("name") String name) {
+    public ResponseEntity<Movie>  getMovieByName(@PathVariable("name") String name) {
         return new ResponseEntity(ms.returnMovie(name), HttpStatus.CREATED);
     }
 
